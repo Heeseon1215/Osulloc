@@ -17,40 +17,84 @@
 
  --font-main-en : "PPNeueMontreal", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, sans-serif;
 
-  /* 폰트 크기 */
-  --font-main-title-xxlg : 6.875rem; /*110px*/
-  --font-main-title-xlg : 2.5rem; /*40px*/
-  --font-main-title-lg : 1.875rem; /*30px*/
-  --font-main-title-md : 1.5625rem; /*25px*/
+  /* 폰트 크기 (모바일)*/
+  --font-main-title-lg : 4.25rem; /*68px*/
+  --font-main-title-md : 1.5rem; /*24px*/
   --font-main-title-rg : 1.25rem; /*20px*/
-  --font-main-title-sm : 0.75rem; /*12px*/
- 
+  --font-main-title-sm : 0.875rem; /*14px*/
+  --font-main-title-xsm : 0.75rem; /*12px*/
+  --font-main-title-xxsm : 0.625rem; /*10px*/
+
+/*  
+  폰트 크기 (pc)
+  --font-main-title-xxlg : 6.875rem; //165px
+  --font-main-title-xlg : 2.5rem; //120px
+  --font-main-title-lg : 2.5rem; //38px
+  --font-main-title-md : 2.5rem; //30px
+  --font-main-title-rg : 1.875rem; //27px
+  --font-main-title-sm : 1.875rem; //25px
+  --font-main-title-xsm : 1.5625rem; //18px
+  --font-main-title-xxsm : 1.25rem; //14px
+  */
  
   /* 색상 */
-  --color-primary: #FF4B1E;
-  --color-primary-second: #FF9E86;
-  --color-secondary: #FFFBEA;
+  --color-primary: #1D360F;
+  --color-primary-second: #244413;
+  --color-secondary: #071401;
+  --color-secondary-light: #AAB654;
   
   --color-white: #ffffff;
+  --color-black: #100D0D;
+  --color-sub-black: #4D4D4D;
  
  
   /* border */
-  --border-btm-primary: 3px solid var(--color-primary);
-  --border-btm-primary-skill: 2px solid var(--color-primary);
+  --border-btm-primary: 1px solid #C6C6C6;
  
-  /* spacing */
-  --spacing-xxxlg: 11.25rem;/* 180px */
-  --spacing-xxlg: 9.375rem;/* 150px */
-  --spacing-xlg: 8.75rem;/* 140px */
-  --spacing-lg: 6.5625rem; /* 105px */
-  --spacing-md: 4.375rem; /* 70px */
-  --spacing-sm: 3.125rem; /* 50px */
-  --spacing-xsm: 1.5625rem; /* 25px */
-  --spacing-xxsm: 0.75rem; /* 12px */
+  /* spacing (모바일) */
+  --spacing-xlg: 2.5rem;/*40px*/
+  --spacing-lg: 1.875rem; /*30px*/
+  --spacing-md: 1.5rem; /*24px*/
+  --spacing-sm: 1.375rem; /*22px*/
+  --spacing-xsm: 0.75rem; /*12px*/
  
 }
+.flex-wrapper {
+  display: flex;
+}
+
+/* 드래그 */
+html ::selection {
+  background-color: rgba(170, 182, 84,0.1);
+  color: var(--color-primary);
+}
+
+@media (min-width:768px) {
+  header {}
+  header .main-logo {}
+  header .main-logo a {}
+  header .main-logo a h1 {}
+  header .menu {}
+  header .menu .global-menu {}
+  header .menu .global-menu li {}
+  header .menu .global-menu li a {}
+  header .menu .global-menu li a .down-icon {}
+
+  header .menu-login {}
+  header .menu-login li {}
+  header .menu-login li a {}
+
+  header .menu-icon {}
+  header .menu-icon .bar1 {}
+  header .menu-icon .bar2 {}
+  header .menu-icon .bar3 {}
 
 
+
+
+
+
+}
 
 
 
