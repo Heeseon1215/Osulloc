@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/**** font ****/
+/* font-family: 'Jeju Myeongjo'; */
+@import url("./assets/styles/JejuMyeongjo.css");
+
+/* font-family: 'Unna'; */
+@import url("./assets/styles/Unna.css");
+
+
+/**** css 변수 ****/
+:root {
+  /* 폰트 */
+ --font-main-ko : "'Jeju Myeongjo'", 'Courier New', Courier, monospace , Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
+ 
+ --font-sub-ko : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+ --font-main-en : "PPNeueMontreal", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, sans-serif;
+
+  /* 폰트 크기 */
+  --font-main-title-xxlg : 6.875rem; /*110px*/
+  --font-main-title-xlg : 2.5rem; /*40px*/
+  --font-main-title-lg : 1.875rem; /*30px*/
+  --font-main-title-md : 1.5625rem; /*25px*/
+  --font-main-title-rg : 1.25rem; /*20px*/
+  --font-main-title-sm : 0.75rem; /*12px*/
+ 
+ 
+  /* 색상 */
+  --color-primary: #FF4B1E;
+  --color-primary-second: #FF9E86;
+  --color-secondary: #FFFBEA;
+  
+  --color-white: #ffffff;
+ 
+ 
+  /* border */
+  --border-btm-primary: 3px solid var(--color-primary);
+  --border-btm-primary-skill: 2px solid var(--color-primary);
+ 
+  /* spacing */
+  --spacing-xxxlg: 11.25rem;/* 180px */
+  --spacing-xxlg: 9.375rem;/* 150px */
+  --spacing-xlg: 8.75rem;/* 140px */
+  --spacing-lg: 6.5625rem; /* 105px */
+  --spacing-md: 4.375rem; /* 70px */
+  --spacing-sm: 3.125rem; /* 50px */
+  --spacing-xsm: 1.5625rem; /* 25px */
+  --spacing-xxsm: 0.75rem; /* 12px */
+ 
+}
+
+
+
+
+
+
+
