@@ -11,21 +11,27 @@
 /**** css 변수 ****/
 :root {
   /* 폰트 */
- --font-main-ko : "'Jeju Myeongjo'", 'Courier New', Courier, monospace , Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
- 
- --font-sub-ko : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-main-ko: 'Jeju Myeongjo', 'Courier New', Courier, monospace, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
 
- --font-main-en : "PPNeueMontreal", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, sans-serif;
+  --font-sub-ko: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  --font-main-en: "Unna", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, serif;
 
   /* 폰트 크기 (모바일)*/
-  --font-main-title-lg : 4.25rem; /*68px*/
-  --font-main-title-md : 1.5rem; /*24px*/
-  --font-main-title-rg : 1.25rem; /*20px*/
-  --font-main-title-sm : 0.875rem; /*14px*/
-  --font-main-title-xsm : 0.75rem; /*12px*/
-  --font-main-title-xxsm : 0.625rem; /*10px*/
+  --font-main-title-lg: 4.25rem;
+  /*68px*/
+  --font-main-title-md: 1.5rem;
+  /*24px*/
+  --font-main-title-rg: 1.25rem;
+  /*20px*/
+  --font-main-title-sm: 0.875rem;
+  /*14px*/
+  --font-main-title-xsm: 0.75rem;
+  /*12px*/
+  --font-main-title-xxsm: 0.625rem;
+  /*10px*/
 
-/*  
+  /*  
   폰트 크기 (pc)
   --font-main-title-xxlg : 6.875rem; //165px
   --font-main-title-xlg : 2.5rem; //120px
@@ -36,67 +42,294 @@
   --font-main-title-xsm : 1.5625rem; //18px
   --font-main-title-xxsm : 1.25rem; //14px
   */
- 
+
   /* 색상 */
   --color-primary: #1D360F;
   --color-primary-second: #244413;
   --color-secondary: #071401;
   --color-secondary-light: #AAB654;
-  
+
   --color-white: #ffffff;
   --color-black: #100D0D;
   --color-sub-black: #4D4D4D;
- 
- 
+
+
   /* border */
   --border-btm-primary: 1px solid #C6C6C6;
- 
+
   /* spacing (모바일) */
-  --spacing-xlg: 2.5rem;/*40px*/
-  --spacing-lg: 1.875rem; /*30px*/
-  --spacing-md: 1.5rem; /*24px*/
-  --spacing-sm: 1.375rem; /*22px*/
-  --spacing-xsm: 0.75rem; /*12px*/
- 
+  --spacing-xlg: 2.5rem;
+  /*40px*/
+  --spacing-lg: 1.875rem;
+  /*30px*/
+  --spacing-md: 1.5rem;
+  /*24px*/
+  --spacing-sm: 1.375rem;
+  /*22px*/
+  --spacing-xsm: 0.75rem;
+  /*12px*/
+
 }
+
 .flex-wrapper {
   display: flex;
 }
 
+.grid-wraooer {
+  display: grid;
+}
+
+.margin-basic {
+  margin: 16px;
+}
+
 /* 드래그 */
 html ::selection {
-  background-color: rgba(170, 182, 84,0.1);
+  background-color: rgba(170, 182, 84, 0.1);
   color: var(--color-primary);
 }
 
-@media (min-width:768px) {
-  header {}
-  header .main-logo {}
-  header .main-logo a {}
-  header .main-logo a h1 {}
-  header .menu {}
-  header .menu .global-menu {}
-  header .menu .global-menu li {}
-  header .menu .global-menu li a {}
-  header .menu .global-menu li a .down-icon {}
-
-  header .menu-login {}
-  header .menu-login li {}
-  header .menu-login li a {}
-
-  header .menu-icon {}
-  header .menu-icon .bar1 {}
-  header .menu-icon .bar2 {}
-  header .menu-icon .bar3 {}
+/* 기본 : 모바일 */
 
 
+header {
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  /* margin: 0 16px; */
+  background-color: var(--color-white);
+}
+
+header .main-logo {
+  background: url(./images/main-logo.png) no-repeat 50% / 80%;
+  text-indent: -9999px;
+  width: 60px;
+}
+
+
+/* 글로벌 메뉴 */
+header .menu {
+  gap: var(--spacing-lg);
+  flex-direction: column;
+  height: 100vh; 
+  position: absolute;
+  top: 100% ; left: 0;
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.6s;
+}
+header .menu.toggle-menu {
+  height: 100vh; 
+}
+
+header .menu .global-menu {
+  width: 90vw;
+  font-family: var(--font-main-ko);
+  font-size: var(--font-main-title-rg);
+  color: var(--color-white);
+  flex-direction: column;
+  padding-top: 80px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+
+header .menu .global-menu li a {
+  display: block;
+  border-bottom: 1px solid var(--color-white);
+  padding: 20px 10px ;
+}
 
 
 
+/* 로그인 샵 */
 
+header .menu .menu-login {
+  margin: 0 auto;
+  gap: var(--spacing-xsm);
+  width: 90vw;
+}
+
+header .menu .menu-login li a {
+  font-family: var(--font-main-en);
+  display: block;
+  border: var(--color-white) 1px solid;
+  border-radius: 20px;
+  padding: 5px 30px;
+  color: var(--color-white);
+}
+
+header .menu .menu-login li:last-child a{
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+
+/* 메뉴 햄버거 아이콘 */
+header .menu-icon {
+  width: 50px;
+  height: 50px;
+  place-content: center;
+}
+
+header .menu-icon span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--color-primary);
+  margin: 5px auto;
+  transition: 0.3s;
+}
+
+/* 메뉴 햄버거 아이콘 X 모양  */
+header .menu-icon.toggle-btn .bar1 {
+  transform: translateY(4px) rotate(45deg);
+}
+
+header .menu-icon.toggle-btn .bar2 {
+  transform: scale(0);
+}
+
+header .menu-icon.toggle-btn  .bar3{
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+/**** main-introduce ****/
+.main-introduce {
+  padding-top: 74px;
+}
+
+.main-btn {
+  
+}
+
+.main-introduce .main-introduce-title {
+  font-family: var(--font-main-en);
+  font-weight: 400;
+  color: var(--color-primary);
+  font-size: var(--font-main-title-lg);
+  text-align: right;
+  width: 48vw;
+  line-height: 3.6rem;
+}
+.main-introduce .main-introduce-title span {
+  font-weight: 500;
+  font-style: italic;
+  background: url(./images/main-introduce-title-bg.svg) no-repeat 50% / 90%;
+}
+
+.main-introduce .main-introduce-img {
+  display: flex;
+  margin: var(--spacing-xlg) 0;
+}
+
+.main-introduce img {
+  height: 360px;
+  width: 260px;
+  display: inline-block;
+  border-radius: 12px;
+  margin-left: auto;
+  object-fit: cover;
+}
+
+.main-introduce .main-introduce-text {
+  font-size: var(--font-main-title-xsm);
+  font-family: var(--font-main-ko);
+  line-height: 1.2rem;
+  color: var(--color-primary);
+  margin: var(--spacing-xlg);
+  margin-left: auto;
+  width: 220px;
+  font-weight: 500;
+
+}
+.main-introduce .main-introduce-text .main-introduce-sub-text{
+  display: none; 
+}
+
+
+/* main-story */
+
+.main-story .main-stroy-intro {
+  font-family: var(--font-main-ko);
+  border-top: 1px solid #d6d6d6;
+  padding-top: var(--spacing-sm);
+}
+.main-story .main-stroy-intro .main-title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.main-story .main-stroy-intro .main-story-intro-txt .main-story-intro-txt-title {
+  font-size: var(--font-main-title-md);
+  font-weight: normal;
+  color: var(--color-black);
+  line-height: 2rem;
+  margin-bottom: var(--spacing-xsm);
+}
+.main-story .main-stroy-intro .main-story-intro-txt .main-story-intro-txt-title span {
+  display: none;
+}
+.main-story .main-stroy-intro .main-story-intro-txt .main-story-intro-txt-sub {
+  font-size: var(--font-main-title-xxsm);
+  line-height: 1.2rem;
+  color: var(--color-sub-black);
+  margin-bottom: var(--spacing-xsm);
 }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width : 768px) {
+  header .menu-icon  {
+    display: none;
+
+  }
+  header .menu {
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    position: static;
+    background-color: #fff;
+    
+
+  }
+
+  header .menu .global-menu{
+    position: static;
+    color: var(--color-primary);
+    font-size: 16px;
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  header .menu .global-menu li a{
+    border-bottom: none;
+  }
+
+}

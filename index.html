@@ -14,25 +14,26 @@
   <link rel="shortcut icon" href="./images/faviconfavicon.ico">
   <link rel="manifest" href="./images/faviconsite.webmanifest">
   <!-- open graphy -->
-    <!-- title, desc -->
-    <meta name="Osulloc" content="Osulloc 홈페이지 제작">
-   <!-- og -->
-    <meta property="og:title" content="Osulloc">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://heeseon1215.github.io/">
-    <meta property="og:url" content="https://heeseon1215.github.io/Osulloc/">
-    <meta property="og:description" content="천혜의 자연과 사람의 정성으로 만든 명차 오설록">
+  <!-- title, desc -->
+  <meta name="Osulloc" content="Osulloc 홈페이지 제작">
+  <!-- og -->
+  <meta property="og:title" content="Osulloc">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://heeseon1215.github.io/">
+  <meta property="og:url" content="https://heeseon1215.github.io/Osulloc/">
+  <meta property="og:description" content="천혜의 자연과 사람의 정성으로 만든 명차 오설록">
 
   <!-- style -->
   <link rel="stylesheet" href="./assets/styles/reset.min.css">
   <link rel="stylesheet" href="./index.css">
 
   <!-- js -->
-  <script src="./scripts/jquery-3.7.1.min.js"></script>
+  <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+  <script defer src="./index.js"></script>
 </head>
 
 <body>
-  
+
   <!-- header -->
   <header class="header flex-wrapper">
     <!-- 로고 -->
@@ -43,34 +44,34 @@
     </div>
 
     <!-- nav -->
-    <nav class="menu">
+    <nav class="menu flex-wrapper">
       <ul class="global-menu flex-wrapper">
         <li><a href="#">오설록의 이야기</a></li>
         <li><a href="#">오설록의 차밭</a></li>
         <li><a href="#">티 헤리티지</a></li>
         <li><a href="#">베스트 제품<div class="down-icon"></div></a></li>
       </ul>
+
+      <ul class="menu-login flex-wrapper">
+        <li><a href="#">LOG-IN</a></li>
+        <li><a href="#">SHOP</a></li>
+      </ul>
     </nav>
 
-    <ul class="menu-login flex-wrapper">
-      <li><a href="#">LOG-IN</a></li>
-      <li><a href="#">SHOP</a></li>
-    </ul>
-
-    <div class="menu-icon">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+    <div class="menu-icon grid-wrapper">
+      <span class="bar1 "></span>
+      <span class="bar2 "></span>
+      <span class="bar3 "></span>
     </div>
   </header>
 
   <!-- main -->
   <!-- main-introduce -->
-  <div class="main-introduce">
+  <div class="main-introduce margin-basic">
     <h2 class="main-introduce-title">
       TEA
       <br>FROM
-      <br>JEJU
+      <br><span>JEJU</span>
     </h2>
     <div class="main-introduce-img">
       <img src="./images/main-introduce-img.png" alt="">
@@ -87,13 +88,13 @@
     </div>
   </div>
   <!-- main-story -->
-  <div class="main-story">
+  <div class="main-story margin-basic">
     <div class="main-stroy-intro">
       <h2 class="main-title">오설록의 이야기</h2>
       <div class="main-story-intro-txt">
-        <strong>우리나라에 사라진 차 문화를 새롭게 꽃 피우겠다는 오설록의 아름다운 집념은 제주의 자연을 이해하고 푸른 꿈을 꾸며 일구어 왔습니다. 최고의 차를 향한 끊임없는 연구와 정성으로 결실을
-          이루었습니다.</strong>
-        <p>오설록은 한국을 대표하는 럭셔리 차 브랜드로서 일상 속 여유를 되찾고 각자의 취향 있는 티라이프를 재발견할 수 있도록 끊임없이 노력하고 있습니다.</p>
+        <p class="main-story-intro-txt-title">우리나라에 사라진 차 문화를 새롭게 꽃 피우겠다는 오설록의 아름다운 집념은 제주의 자연을 이해하고 푸른 꿈을 꾸며 일구어 왔습니다.<span> 최고의 차를 향한 끊임없는 연구와 정성으로 결실을
+          이루었습니다.</span></p>
+        <p class="main-story-intro-txt-sub" >오설록은 한국을 대표하는 럭셔리 차 브랜드로서 일상 속 여유를 되찾고 각자의 취향 있는 티라이프를 재발견할 수 있도록 끊임없이 노력하고 있습니다.</p>
         <a href="#" class="main-btn">더 알아보기</a>
       </div>
     </div>
@@ -424,7 +425,7 @@
           <p>한정수량</p>
         </div>
       </li>
-      </ul>
+    </ul>
   </div>
 
   <!-- footer -->
