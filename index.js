@@ -21,3 +21,15 @@ $('header .menu-icon').on('click', function() {
   // 배경색 바뀌는건 나중에하자...힘들다
 
 });
+
+
+
+// 스와이퍼
+const swiper = new Swiper(".main-slide", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+scrollbar: {
+  el: ".swiper-scrollbar",
+  hide: true,
+},
+});
